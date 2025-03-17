@@ -46,6 +46,6 @@ spec:
 
           envFrom:
             - configMapRef:
-                name: backend-configMap
+                name: backend-configmap
       restartPolicy: Always
 
