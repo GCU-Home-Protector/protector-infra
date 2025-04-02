@@ -10,4 +10,5 @@ data:
     DB_USERNAME: "${DB_USERNAME}"
     REDIS_HOST: "${REDIS_HOST}"
     REDIS_PORT: "${REDIS_PORT}"
+    SENTRY_DSN : "${SENTRY_DSN}"
 
