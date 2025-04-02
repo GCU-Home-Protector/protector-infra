@@ -8,6 +8,7 @@ metadata:
     alb.ingress.kubernetes.io/group.name: home-protector
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
     alb.ingress.kubernetes.io/certificate-arn: "${AWS_HTTPS_CERT}"
+    alb.ingress.kubernetes.io/ssl-redirect : '443'
 spec:
   ingressClassName: alb
   rules:
