@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-deployment
+  labels:
+    app: front-deployment
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: front-application
+  template:
+    metadata:
+      name: front-application
+      labels:
+        app: front-application
+    spec:
+      containers:
+        - name: front-application
+#          image: "${front_image}"
+          image: nginx:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              protocol: TCP
+      restartPolicy: Always
+      
