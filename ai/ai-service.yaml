@@ -4,7 +4,7 @@ metadata:
   name: ai-service
 spec:
   selector:
-    app: ai-service
+    app: ai-application
   ports:
     - protocol: TCP
       port: 5000
