@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
         - name: backend-application
-          image: "${backend_image}"
+          image: ${backend_image}
           imagePullPolicy: IfNotPresent
           ports:
             - name : http
