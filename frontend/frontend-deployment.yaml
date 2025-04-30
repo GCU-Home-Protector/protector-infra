@@ -18,11 +18,9 @@ spec:
     spec:
       containers:
         - name: front-application
-#          image: "${front_image}"
           image: nginx:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
               protocol: TCP
       restartPolicy: Always
-      
