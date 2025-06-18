@@ -13,7 +13,7 @@ jobs:
       - name: Checkout default branch code # 뒤의 Issue Parser 위해 checkout 필요함
         uses: actions/checkout@v4
         with:
-          ref: master
+          ref: main
 
       - name: Issue Parser
         uses: stefanbuck/github-issue-praser@v3
