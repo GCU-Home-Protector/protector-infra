@@ -1,2 +1,2 @@
-**/backend/**-configMap.yaml
-**/backend/**-secret.yaml
+#**/backend/**-configMap.yaml
+#**/backend/**-secret.yaml
