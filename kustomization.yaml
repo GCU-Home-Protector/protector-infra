@@ -3,5 +3,5 @@ kind: Kustomization
 resources:
   - base/backend
   - base/ai
-  - monitoring/prometheus
+  - base/monitoring/prometheus
   - network
