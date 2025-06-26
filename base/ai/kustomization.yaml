@@ -3,8 +3,5 @@ kind: Kustomization
 resources:
   - ai-deployment.yaml
   - ai-service.yaml
-
-images:
-  - name: "${ai_image}"
-    newName: ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/home-protector-ai
-    newTag: latest
+  - ai-hpa.yaml
+  - ai-pdb.yaml
