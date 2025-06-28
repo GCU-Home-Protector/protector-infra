@@ -25,7 +25,6 @@ if (!(Test-Path $EnvFile)) {
 Write-Output "[1/3] Creating Kubernetes Secret YAML..."
 kubectl create secret generic $SecretName `
     --from-env-file=$EnvFile `
-#     --namespace $Namespace `
     --dry-run=client -o yaml > $SecretFile
 
 # Encrypt the Secret using kubeseal
