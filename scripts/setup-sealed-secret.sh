@@ -6,7 +6,7 @@ set -e
 NAMESPACE="kube-system"
 RELEASE_NAME="sealed-secrets"
 CONTROLLER_NAME="sealed-secrets-controller"
-KEY_FILE="sealed-secrets-public.pem"
+KEY_FILE="sealed-secrets-key.pem"
 
 # OS 확인
 OS=$(uname -s | tr '[:upper:]' '[:lower:]')
@@ -38,8 +38,8 @@ kubectl wait --namespace ${NAMESPACE} \
   --timeout=180s
 
 echo "🔑 [4] 퍼블릭 키 추출 → ${KEY_FILE}"
-kubectl get secret -n ${NAMESPACE} -l sealedsecrets.bitnami.com/sealed-secrets-key \
-  -o jsonpath="{.items[0].data.tls\.crt}" | base64 -d > "${KEY_FILE}"
+kubectl get secret sealed-secrets-key \
+  -o jsonpath="{.data.tls\.crt}" | base64 -d > "${KEY_FILE}"
 
 echo "🧰 [5] kubeseal CLI 설치"
 if [ "$OS" = "linux" ]; then
