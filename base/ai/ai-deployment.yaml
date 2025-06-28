@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ai-deployment
+  name: ai-application
   labels:
-    app: ai-deployment
+    app: ai-application
 
 spec:
   replicas: 2
@@ -13,7 +13,7 @@ spec:
 
   template:
     metadata:
-      name: ai-deployment
+      name: ai-application
       labels:
         app: ai-application
 
