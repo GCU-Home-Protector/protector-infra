@@ -3,7 +3,7 @@ kind: Kustomization
 
 resources:
   - ../../../base/backend
-  - real-plain-secret.yaml
+  - sealed-secret.yaml
 
 patches:
   - path: patch-image.yaml
