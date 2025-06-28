@@ -1,2 +1,4 @@
 #**/backend/**-configMap.yaml
 #**/backend/**-secret.yaml
+
+**/overlays/**/plain-secret.yaml
