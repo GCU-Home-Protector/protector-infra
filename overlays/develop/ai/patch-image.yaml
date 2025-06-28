@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ai-application
+spec:
+  template:
+    spec:
+      containers:
+        - name: ai-application
+          image: 637423458012.dkr.ecr.ap-northeast-2.amazonaws.com/home-protector-ai:latest

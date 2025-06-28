@@ -6,7 +6,7 @@ metadata:
     app: ai-deployment
 
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: ai-application
@@ -20,10 +20,9 @@ spec:
     spec:
       containers:
         - name: ai-application
-          image: "${ai_image}"
+          image: han16935/protector-ai:latest
           imagePullPolicy: IfNotPresent
           ports:
             - name : http
               containerPort: 5000
       restartPolicy: Always
-      

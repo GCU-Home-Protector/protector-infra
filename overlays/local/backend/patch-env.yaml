@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-application
+spec:
+  template:
+    spec:
+      containers:
+        - name: backend-application
+          envFrom:
+            - secretRef:
+                name: backend-secret
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: local
