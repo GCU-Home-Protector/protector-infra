@@ -1,3 +1,6 @@
+# chmod +x ./setup-sealed-secret.sh
+# sudo ./setup-sealed-secret.sh
+
 #!/bin/bash
 
 set -e
