@@ -51,8 +51,8 @@ if [ "$OS" = "linux" ]; then
   cd "$TMP_DIR"
 
   # Linux용 설치
-  curl -LO "https://github.com/bitnami-labs/sealed-secrets/releases/download/v${KUBESEAL_VERSION}/kubeseal-${KUBESEAL_VERSION}-linux-${ARCH}.tar.gz"
-  tar -xvzf "kubeseal-${KUBESEAL_VERSION}-linux-${ARCH}.tar.gz" kubeseal
+  curl -LO "https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.30.0/kubeseal-0.30.0-linux-amd64.tar.gz"
+  tar -xvzf "kubeseal-0.30.0-linux-amd64.tar.gz" kubeseal
 
   chmod +x kubeseal
   sudo mv kubeseal /usr/local/bin/
