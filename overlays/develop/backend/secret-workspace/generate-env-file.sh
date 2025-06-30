@@ -5,7 +5,7 @@
 #!/bin/bash
 
 #TARGET_DIR="/protector-infra/overlays/develop/backend/secret-workspace"
-TARGET_FILE="/.env.secret"
+TARGET_FILE="./.env.secret"
 
 cat > "$TARGET_FILE" <<EOF
 MASTER_DB_CONNECTION=${MASTER_DB_CONNECTION}
