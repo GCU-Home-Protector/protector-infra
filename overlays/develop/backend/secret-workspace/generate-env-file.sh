@@ -1,11 +1,11 @@
 # 실행 방법
-# chmod +x make_env_secret.sh
-# ./make_env_secret.sh
+# chmod +x generate-env-file.sh
+# ./generate-env-file.sh
 
 #!/bin/bash
 
-TARGET_DIR="/protector-infra/overlays/develop/backend/secret-workspace"
-TARGET_FILE="$TARGET_DIR/.env.secret"
+#TARGET_DIR="/protector-infra/overlays/develop/backend/secret-workspace"
+TARGET_FILE="/.env.secret"
 
 cat > "$TARGET_FILE" <<EOF
 MASTER_DB_CONNECTION=${MASTER_DB_CONNECTION}
