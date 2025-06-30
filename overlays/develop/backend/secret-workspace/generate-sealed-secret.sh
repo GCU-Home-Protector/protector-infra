@@ -12,6 +12,7 @@ SECRET_FILE="secret.yaml"
 SEALED_SECRET_FILE="../sealed-secret.yaml"
 
 # sealed-secrets-public.pem 파일 경로 확인
+# export SEALED_SECRETS_CERT=~/protector-infra/overlays/develop/backend/secret-workspace/sealed-secrets-key.pem
 if [ -z "$SEALED_SECRETS_CERT" ]; then
     echo "❌ 오류: SEALED_SECRETS_CERT 환경 변수가 설정되지 않았습니다."
     exit 1
