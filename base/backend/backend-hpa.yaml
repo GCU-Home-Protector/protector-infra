@@ -6,7 +6,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: twp-service
+    name: backend-application
   minReplicas: 2        # 최소 pod 개수
   maxReplicas: 4        # 최대 pod 개수
   metrics:
