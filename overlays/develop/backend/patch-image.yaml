@@ -7,4 +7,4 @@ spec:
     spec:
       containers:
         - name: backend-application
-          image: 637423458012.dkr.ecr.ap-northeast-2.amazonaws.com/home-protector:8be999cc196027ba9b71d721a151e90a8ed65ce2
+          image: 637423458012.dkr.ecr.ap-northeast-2.amazonaws.com/home-protector:a7d1b5b15c458c2d6a7d27a955be32357155dc1b
