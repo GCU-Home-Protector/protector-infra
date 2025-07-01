@@ -7,12 +7,13 @@ metadata:
     alb.ingress.kubernetes.io/target-type: instance
     alb.ingress.kubernetes.io/group.name: home-protector
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
-    alb.ingress.kubernetes.io/certificate-arn: "${AWS_HTTPS_CERT}"
+    alb.ingress.kubernetes.io/certificate-arn: "${AWS_HTTPS_CERT}" # 실제 값으로 바뀌어야
     alb.ingress.kubernetes.io/ssl-redirect : '443'
+    external-dns.alpha.kubernetes.io/hostname: be.home-protector.click,prometheus.home-protector.click
 spec:
   ingressClassName: alb
   rules:
-    - host: "be.${HOST_NAME}"
+    - host: "be.home-protector.click"
       http:
         paths:
           - path: /
@@ -22,7 +23,7 @@ spec:
                 name: backend-service
                 port:
                   number: 80
-    - host: "prometheus.${HOST_NAME}"
+    - host: "prometheus.home-protector.click"
       http:
         paths:
           - path: /
