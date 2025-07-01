@@ -9,7 +9,7 @@ SECRET_NAME="backend-secret"
 #NAMESPACE="dev-twp-service"
 ENV_FILE=".env.secret"
 SECRET_FILE="secret.yaml"
-SEALED_SECRET_FILE="../sealed-secret.yaml"
+SEALED_SECRET_FILE="../sealed-secret.yaml" # 반드시
 
 # sealed-secrets-public.pem 파일 경로 확인
 # export SEALED_SECRETS_CERT=~/protector-infra/overlays/develop/backend/secret-workspace/sealed-secrets-key.pem
@@ -38,7 +38,7 @@ fi
 echo "[1/3] Creating Kubernetes Secret YAML..."
 kubectl create secret generic $SECRET_NAME \
     --from-env-file=$ENV_FILE \
-#    --namespace $NAMESPACE \
+    --namespace default \
     --dry-run=client -o yaml > $SECRET_FILE
 
 # Encrypt the Secret using kubeseal
