@@ -7,4 +7,4 @@ spec:
     spec:
       containers:
         - name: ai-application
-          image: 637423458012.dkr.ecr.ap-northeast-2.amazonaws.com/home-protector-ai
+          image: 637423458012.dkr.ecr.ap-northeast-2.amazonaws.com/home-protector-ai:a0eed78fe2928e0d61188c3f1d466f7ffe58ca7a
