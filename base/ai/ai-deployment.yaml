@@ -16,6 +16,8 @@ spec:
       name: ai-application
       labels:
         app: ai-application
+      annotations:
+        prometheus.io/scrape: "false"
 
     spec:
       containers:
