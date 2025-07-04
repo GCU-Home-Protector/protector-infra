@@ -4,5 +4,4 @@ resources:
   - ../../overlays/develop/ai
   - ../../overlays/develop/backend
   - ../../network
-  - ../../base/monitoring/prometheus
-  - ../../base/monitoring/grafana
+  - ../../overlays/develop/monitoring
