@@ -9,7 +9,7 @@ metadata:
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
     alb.ingress.kubernetes.io/certificate-arn: "${AWS_HTTPS_CERT}" # 실제 값으로 바뀌어야
     alb.ingress.kubernetes.io/ssl-redirect : '443'
-    external-dns.alpha.kubernetes.io/hostname: be.home-protector.click,prometheus.home-protector.click
+    external-dns.alpha.kubernetes.io/hostname: be.home-protector.click,prometheus.home-protector.click, grafana.home-protector.click
 spec:
   ingressClassName: alb
   rules:
@@ -32,4 +32,14 @@ spec:
               service:
                 name: prometheus-service
                 port:
-                  number: 80
+                  number: 9090
+    - host: "grafana.home-protector.click"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: grafana-service
+                port:
+                  number: 3000

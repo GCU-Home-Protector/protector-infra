@@ -5,3 +5,4 @@ resources:
   - ../../overlays/develop/backend
   - ../../network
   - ../../base/monitoring/prometheus
+  - ../../base/monitoring/grafana
