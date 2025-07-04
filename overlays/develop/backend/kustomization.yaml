@@ -8,6 +8,7 @@ resources:
 patches:
   - path: patch-image.yaml
   - path: patch-env.yaml
+  - path : patch-service.yaml
 
 generatorOptions:
   disableNameSuffixHash: true
