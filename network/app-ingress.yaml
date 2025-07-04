@@ -4,7 +4,7 @@ metadata:
   name: home-protector-ingress
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/target-type: instance
+    alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/group.name: home-protector
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
     alb.ingress.kubernetes.io/certificate-arn: "${AWS_HTTPS_CERT}" # 실제 값으로 바뀌어야
