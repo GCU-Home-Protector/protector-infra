@@ -3,4 +3,5 @@ kind : Kustomization
 resources:
   - ../../base/ai
   - ../../base/monitoring/prometheus
+  - ../../base/monitoring/grafana
   - ../../overlays/local/backend
