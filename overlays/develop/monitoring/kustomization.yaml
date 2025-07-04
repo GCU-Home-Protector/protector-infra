@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../../base/monitoring/prometheus
+  - ../../../base/monitoring/grafana
+
+patches:
+  - path: patch-prometheus-service.yaml
+  - path: patch-grafana-service.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true
